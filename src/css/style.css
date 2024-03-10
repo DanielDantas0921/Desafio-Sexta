@@ -1,0 +1,214 @@
+/* index.html */
+
+
+/* zerar estilos e aplicar background ao body e gerar a classe container para alinhar as seções */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+/* header */
+
+header{
+background-color: rgb(0, 0, 0);
+width: 100%;
+height: auto;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0.5rem 2rem;
+
+
+}
+
+header a img{
+    max-width: 50%;
+}
+
+.header-links ul{
+display: flex;
+gap: 30px;
+list-style: none;
+}
+
+.header-links ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Carrousel de destaques */
+
+
+/* section de shows */
+
+.shows{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card{
+    width: 250px;
+    height: auto;
+    border: 1px solid rgb(45, 44, 44);
+    transition: all 0.5s ease-in-out;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    height: 300px;
+}
+.card-description{
+    display: none;
+}
+.card-description h3{
+    margin-top: 5px;
+}
+
+.card-description p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.card:hover .card-description{
+    display: block;
+    text-align: center;
+}
+
+.card:hover{
+    transform: scale(1.2);
+    
+}
+/* loading */
+
+.loading{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    animation: rotate 2s linear infinite;
+    z-index: 30;
+    border-radius: 50%;
+    width: 30px;
+}
+.loading img{
+    border-radius: 50%;
+    width: 50px;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    } to{
+        transform: rotate(360deg);
+    }
+}
+
+/* lightbox e seus conteúdos */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: auto; */
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-conteudo{
+    display: flex;
+    overflow: scroll;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.lightbox-conteudo img {
+    width: 300px;
+}
+.lightbox-conteudo h3{
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.lightbox-conteudo p{
+    max-width: 300px;
+    text-align: justify;
+    /* max-height: 90px;
+    overflow: hidden; */
+}
+/* .lightbox-conteudo p::after{
+    content: "...";
+} */
+
+.lightboxFechar {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.1rem 0.3rem;
+}
+
+.lightboxFechar:hover {
+    background-color: #fff;
+    color: #000;
+}
+/* estilizar paginação */
+
+
+.paginas{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.btn{
+width: 30px;
+height: 30px;
+font-size: 1.2rem;
+cursor: pointer;
+background-color: #fff;
+border-radius: 5px;
+}
+.btn-left{
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+}
+
+.btn-right{
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+}
+
+.ativo{
+    background-color: #ffffffaa;
+}
