@@ -1,7 +1,6 @@
 O projeto consta com os cards feito através das imagens do show da api. Em baixo dos shows tem uma paginação funcional que clicka e ele limpa os resultados e faz uma nova busca na api. Por fim quando aperta nas imagens( nos itens da lista) Aparece um modal com a imagem , titulo e sinopse do show
 
-
-
+link do projeto rodando: https://desafio-sexta.vercel.app/
 
 
 
